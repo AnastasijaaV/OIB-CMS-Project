@@ -4,22 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ServiceModel;
-using System.Security.Cryptography.X509Certificates;
-using Manager;
 using Contracts;
-using System.Security.Principal;
 using System.ServiceModel.Security;
-using Service;
+using Manager;
+using System.Security.Cryptography.X509Certificates;
+using System.Security.Principal;
 
-
-namespace Client
+namespace Service
 {
     public class Program
     {
-
         static void Main(string[] args)
         {
-            string srvCertCN = Formatter.ParseName(WindowsIdentity.GetCurrent().Name);
+            /// srvCertCN.SubjectName should be set to the service's username. .NET WindowsIdentity class provides information about Windows user running the given process
+			string srvCertCN = Formatter.ParseName(WindowsIdentity.GetCurrent().Name);
 
             NetTcpBinding binding = new NetTcpBinding();
             binding.Security.Transport.ClientCredentialType = TcpClientCredentialType.Certificate;
@@ -29,25 +27,28 @@ namespace Client
             host.AddServiceEndpoint(typeof(IWCFContract), binding, address);
 
             host.Credentials.ClientCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.ChainTrust;
+
+            ///If CA doesn't have a CRL associated, WCF blocks every client because it cannot be validated
             host.Credentials.ClientCertificate.Authentication.RevocationMode = X509RevocationMode.NoCheck;
+
+            ///Set appropriate service's certificate on the host. Use CertManager class to obtain the certificate based on the "srvCertCN"
             host.Credentials.ServiceCertificate.Certificate = CertManager.GetCertificateFromStorage(StoreName.My, StoreLocation.LocalMachine, srvCertCN);
 
             try
             {
                 host.Open();
-                Console.WriteLine("WCFService is started. Press <enter> to stop...");
+                Console.WriteLine("WCFService is started.\nPress <enter> to stop ...");
                 Console.ReadLine();
             }
             catch (Exception e)
             {
                 Console.WriteLine("[ERROR] {0}", e.Message);
+                Console.WriteLine("[StackTrace] {0}", e.StackTrace);
             }
             finally
             {
                 host.Close();
             }
         }
-
-
     }
 }

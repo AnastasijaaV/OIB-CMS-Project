@@ -1,0 +1,6 @@
+C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB-CMS-Project\CMS\CertificateManagerService\bin\Debug\CertificateManagerService.dll
+C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB-CMS-Project\CMS\CertificateManagerService\bin\Debug\CertificateManagerService.pdb
+C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\CertificateManager.csproj.AssemblyReference.cache
+C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\CertificateManager.csproj.CoreCompileInputs.cache
+C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\CertificateManagerService.dll
+C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\CertificateManagerService.pdb
