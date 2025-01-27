@@ -1,0 +1,6 @@
+C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB-CMS-Project\CMS\Manager\bin\Debug\Manager.dll
+C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB-CMS-Project\CMS\Manager\bin\Debug\Manager.pdb
+C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.csproj.AssemblyReference.cache
+C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.csproj.CoreCompileInputs.cache
+C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.dll
+C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.pdb

@@ -1,0 +1,156 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Milica\\Desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\OIB-CMS-Project\\CMS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3C182DEF-212C-4B94-AEA2-2081174A7230}|Manager\\Manager.csproj|C:\\Users\\Milica\\Desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\OIB-CMS-Project\\CMS\\manager\\formatter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C182DEF-212C-4B94-AEA2-2081174A7230}|Manager\\Manager.csproj|solutionrelative:manager\\formatter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C182DEF-212C-4B94-AEA2-2081174A7230}|Manager\\Manager.csproj|C:\\Users\\Milica\\Desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\OIB-CMS-Project\\CMS\\manager\\certmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C182DEF-212C-4B94-AEA2-2081174A7230}|Manager\\Manager.csproj|solutionrelative:manager\\certmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3E0E80-5F27-40A7-8994-9C3393B856E3}|Contracts\\Contracts.csproj|C:\\Users\\Milica\\Desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\OIB-CMS-Project\\CMS\\contracts\\iwcfcontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3E0E80-5F27-40A7-8994-9C3393B856E3}|Contracts\\Contracts.csproj|solutionrelative:contracts\\iwcfcontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{496D594A-76B2-40A1-8F51-5325E31B265B}|CertificateManagerService\\CertificateManager.csproj|C:\\Users\\Milica\\Desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\OIB-CMS-Project\\CMS\\certificatemanagerservice\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{496D594A-76B2-40A1-8F51-5325E31B265B}|CertificateManagerService\\CertificateManager.csproj|solutionrelative:certificatemanagerservice\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{631ED56E-7D03-4F4C-AFA5-9E15928BF2A6}|Service\\Service.csproj|c:\\users\\milica\\desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\oib-cms-project\\cms\\service\\wcfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{631ED56E-7D03-4F4C-AFA5-9E15928BF2A6}|Service\\Service.csproj|solutionrelative:service\\wcfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{631ED56E-7D03-4F4C-AFA5-9E15928BF2A6}|Service\\Service.csproj|C:\\Users\\Milica\\Desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\OIB-CMS-Project\\CMS\\service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{631ED56E-7D03-4F4C-AFA5-9E15928BF2A6}|Service\\Service.csproj|solutionrelative:service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8500E600-F642-4870-9011-981D4DF0A2C9}|Client\\Client.csproj|C:\\Users\\Milica\\Desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\OIB-CMS-Project\\CMS\\client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8500E600-F642-4870-9011-981D4DF0A2C9}|Client\\Client.csproj|solutionrelative:client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8500E600-F642-4870-9011-981D4DF0A2C9}|Client\\Client.csproj|C:\\Users\\Milica\\Desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\OIB-CMS-Project\\CMS\\client\\wcfclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8500E600-F642-4870-9011-981D4DF0A2C9}|Client\\Client.csproj|solutionrelative:client\\wcfclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\Milica\\Desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\OIB-CMS-Project\\CMS\\CertificateManagerService\\Class1.cs",
+              "RelativeDocumentMoniker": "CertificateManagerService\\Class1.cs",
+              "ToolTip": "C:\\Users\\Milica\\Desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\OIB-CMS-Project\\CMS\\CertificateManagerService\\Class1.cs",
+              "RelativeToolTip": "CertificateManagerService\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T16:40:12.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WCFService.cs",
+              "DocumentMoniker": "C:\\Users\\Milica\\Desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\OIB-CMS-Project\\CMS\\Service\\WCFService.cs",
+              "RelativeDocumentMoniker": "Service\\WCFService.cs",
+              "ToolTip": "C:\\Users\\Milica\\Desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\OIB-CMS-Project\\CMS\\Service\\WCFService.cs",
+              "RelativeToolTip": "Service\\WCFService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T13:10:06.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WCFClient.cs",
+              "DocumentMoniker": "C:\\Users\\Milica\\Desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\OIB-CMS-Project\\CMS\\Client\\WCFClient.cs",
+              "RelativeDocumentMoniker": "Client\\WCFClient.cs",
+              "ToolTip": "C:\\Users\\Milica\\Desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\OIB-CMS-Project\\CMS\\Client\\WCFClient.cs",
+              "RelativeToolTip": "Client\\WCFClient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T13:06:13.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IWCFContract.cs",
+              "DocumentMoniker": "C:\\Users\\Milica\\Desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\OIB-CMS-Project\\CMS\\Contracts\\IWCFContract.cs",
+              "RelativeDocumentMoniker": "Contracts\\IWCFContract.cs",
+              "ToolTip": "C:\\Users\\Milica\\Desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\OIB-CMS-Project\\CMS\\Contracts\\IWCFContract.cs",
+              "RelativeToolTip": "Contracts\\IWCFContract.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T13:02:14.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CertManager.cs",
+              "DocumentMoniker": "C:\\Users\\Milica\\Desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\OIB-CMS-Project\\CMS\\Manager\\CertManager.cs",
+              "RelativeDocumentMoniker": "Manager\\CertManager.cs",
+              "ToolTip": "C:\\Users\\Milica\\Desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\OIB-CMS-Project\\CMS\\Manager\\CertManager.cs",
+              "RelativeToolTip": "Manager\\CertManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T13:00:32.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Formatter.cs",
+              "DocumentMoniker": "C:\\Users\\Milica\\Desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\OIB-CMS-Project\\CMS\\Manager\\Formatter.cs",
+              "RelativeDocumentMoniker": "Manager\\Formatter.cs",
+              "ToolTip": "C:\\Users\\Milica\\Desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\OIB-CMS-Project\\CMS\\Manager\\Formatter.cs",
+              "RelativeToolTip": "Manager\\Formatter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T12:57:26.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Milica\\Desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\OIB-CMS-Project\\CMS\\Service\\Program.cs",
+              "RelativeDocumentMoniker": "Service\\Program.cs",
+              "ToolTip": "C:\\Users\\Milica\\Desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\OIB-CMS-Project\\CMS\\Service\\Program.cs",
+              "RelativeToolTip": "Service\\Program.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA1wCcAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T12:53:05.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Milica\\Desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\OIB-CMS-Project\\CMS\\Client\\Program.cs",
+              "RelativeDocumentMoniker": "Client\\Program.cs",
+              "ToolTip": "C:\\Users\\Milica\\Desktop\\cetvrta god\\osnove informacione bezbednosti\\projekat\\OIB-CMS-Project\\CMS\\Client\\Program.cs",
+              "RelativeToolTip": "Client\\Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAA1wAMAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T11:41:11.594Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
