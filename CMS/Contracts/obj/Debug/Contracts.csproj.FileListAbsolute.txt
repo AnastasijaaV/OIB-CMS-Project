@@ -4,3 +4,15 @@ C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB
 C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.csproj.CoreCompileInputs.cache
 C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.dll
 C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.pdb
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\Contracts\bin\Debug\Contracts.dll
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\Contracts\bin\Debug\Contracts.pdb
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.csproj.AssemblyReference.cache
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.csproj.CoreCompileInputs.cache
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.dll
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.pdb
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Contracts\bin\Debug\Contracts.dll
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Contracts\bin\Debug\Contracts.pdb
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.csproj.AssemblyReference.cache
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.csproj.CoreCompileInputs.cache
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.dll
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.pdb

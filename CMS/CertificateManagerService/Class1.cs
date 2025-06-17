@@ -4,26 +4,11 @@ using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.ServiceModel;
 using System.Diagnostics;
-using System.Threading;
+using System.Security.Principal;
+using Contracts;
 
 namespace CertificateManager
 {
-    [ServiceContract]
-    public interface ICertificateManagerService
-    {
-        [OperationContract]
-        void CreateCertificate(string subjectName, bool includePrivateKey);
-
-        [OperationContract]
-        void RevokeCertificate(string serialNumber);
-
-        [OperationContract]
-        void ReplicateData();
-
-        [OperationContract]
-        void NotifyClientsOfRevocation(string serialNumber);
-    }
-
     public class CertificateManagerService : ICertificateManagerService
     {
         private static readonly string CertificateFolder = "C:\\Certificates";
@@ -32,14 +17,10 @@ namespace CertificateManager
         public CertificateManagerService()
         {
             if (!Directory.Exists(CertificateFolder))
-            {
                 Directory.CreateDirectory(CertificateFolder);
-            }
 
             if (!File.Exists(RevocationListPath))
-            {
                 File.Create(RevocationListPath).Dispose();
-            }
         }
 
         public void CreateCertificate(string subjectName, bool includePrivateKey)
@@ -76,12 +57,14 @@ namespace CertificateManager
 
         public void RevokeCertificate(string serialNumber)
         {
+            //2
+            Console.WriteLine($"[RevokeCertificate] Poziv sa serialNumber: {serialNumber}");
+            //--
+
             try
             {
                 File.AppendAllText(RevocationListPath, serialNumber + Environment.NewLine);
                 NotifyClientsOfRevocation(serialNumber);
-
-                // Generate a new certificate for the revoked one
                 CreateCertificate("NewCertFor_" + serialNumber, true);
 
                 LogEvent($"Certificate revoked and renewed. Serial Number: {serialNumber}", EventLogEntryType.Warning);
@@ -99,9 +82,7 @@ namespace CertificateManager
             {
                 string backupPath = Path.Combine(CertificateFolder, "Backup");
                 if (!Directory.Exists(backupPath))
-                {
                     Directory.CreateDirectory(backupPath);
-                }
 
                 foreach (var file in Directory.GetFiles(CertificateFolder))
                 {
@@ -119,32 +100,91 @@ namespace CertificateManager
 
         public void NotifyClientsOfRevocation(string serialNumber)
         {
-            // Placeholder for client notification logic
             Console.WriteLine($"Clients notified of certificate revocation: {serialNumber}");
         }
 
+        public bool RequestCertificate(string windowsUsername)
+        {
+            try
+            {
+                Console.WriteLine($">> RequestCertificate called for {windowsUsername}");
+
+                // ✅ koristi aktivno prijavljenog korisnika
+                WindowsIdentity identity = WindowsIdentity.GetCurrent();
+                WindowsPrincipal principal = new WindowsPrincipal(identity);
+
+                string[] allowedGroups = { "RegionEast", "RegionWest", "RegionNorth", "RegionSouth" };
+                string userGroup = null;
+
+                foreach (string group in allowedGroups)
+                {
+                    if (principal.IsInRole(group))
+                    {
+                        userGroup = group;
+                        break;
+                    }
+                }
+
+                if (userGroup == null)
+                {
+                    Console.WriteLine("❌ Korisnik NIJE u dozvoljenoj grupi.");
+                    LogEvent($"Korisnik {identity.Name} NIJE u dozvoljenoj grupi.", EventLogEntryType.Warning);
+                    return false;
+                }
+
+                string subject = $"CN={identity.Name}, OU={userGroup}";
+                string sanitizedUser = identity.Name.Replace("\\", "_");
+                string certPath = Path.Combine(CertificateFolder, $"{sanitizedUser}.pfx");
+
+                Console.WriteLine($">> Kreiram sertifikat na putanji: {certPath}");
+
+                using (var rsa = RSA.Create(2048))
+                {
+                    var request = new CertificateRequest(
+                        new X500DistinguishedName(subject),
+                        rsa,
+                        HashAlgorithmName.SHA256,
+                        RSASignaturePadding.Pkcs1);
+
+                    var certificate = request.CreateSelfSigned(DateTimeOffset.Now, DateTimeOffset.Now.AddYears(1));
+                    byte[] certData = certificate.Export(X509ContentType.Pfx, "password");
+                    File.WriteAllBytes(certPath, certData);
+                }
+
+                Console.WriteLine($"✔ Sertifikat izdat za {identity.Name} sa OU={userGroup}");
+                LogEvent($"✔ Sertifikat izdat za {identity.Name} sa OU={userGroup}.", EventLogEntryType.Information);
+
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("❌ GRESKA: " + ex.Message);
+                LogEvent($"❌ Greška prilikom izdavanja sertifikata: {ex.Message}", EventLogEntryType.Error);
+                return false;
+            }
+        }
         private void LogEvent(string message, EventLogEntryType entryType)
         {
             string source = "CertificateManagerService";
             string log = "Application";
 
             if (!EventLog.SourceExists(source))
-            {
                 EventLog.CreateEventSource(source, log);
-            }
 
             EventLog.WriteEntry(source, message, entryType);
         }
     }
 
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             string address = "net.tcp://localhost:8888/CertificateManagerService";
             ServiceHost host = new ServiceHost(typeof(CertificateManagerService));
 
-            NetTcpBinding binding = new NetTcpBinding();
+            NetTcpBinding binding = new NetTcpBinding(SecurityMode.None); // ⬅️ bitno
+
             host.AddServiceEndpoint(typeof(ICertificateManagerService), binding, address);
 
             try

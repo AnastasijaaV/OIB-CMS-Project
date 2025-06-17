@@ -4,3 +4,15 @@ C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB
 C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.csproj.CoreCompileInputs.cache
 C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.dll
 C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.pdb
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\Manager\bin\Debug\Manager.dll
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\Manager\bin\Debug\Manager.pdb
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.csproj.AssemblyReference.cache
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.csproj.CoreCompileInputs.cache
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.dll
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.pdb
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Manager\bin\Debug\Manager.dll
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Manager\bin\Debug\Manager.pdb
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.csproj.AssemblyReference.cache
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.csproj.CoreCompileInputs.cache
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.dll
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.pdb

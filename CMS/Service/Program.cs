@@ -16,10 +16,10 @@ namespace Service
     {
         static void Main(string[] args)
         {
-            /// srvCertCN.SubjectName should be set to the service's username. .NET WindowsIdentity class provides information about Windows user running the given process
-			string srvCertCN = Formatter.ParseName(WindowsIdentity.GetCurrent().Name);
+            // srvCertCN.SubjectName should be set to the service's username.
+            string srvCertCN = "wcfservice";
 
-            NetTcpBinding binding = new NetTcpBinding();
+            NetTcpBinding binding = new NetTcpBinding(SecurityMode.Transport);
             binding.Security.Transport.ClientCredentialType = TcpClientCredentialType.Certificate;
 
             string address = "net.tcp://localhost:9999/Receiver";
@@ -27,12 +27,21 @@ namespace Service
             host.AddServiceEndpoint(typeof(IWCFContract), binding, address);
 
             host.Credentials.ClientCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.ChainTrust;
-
-            ///If CA doesn't have a CRL associated, WCF blocks every client because it cannot be validated
             host.Credentials.ClientCertificate.Authentication.RevocationMode = X509RevocationMode.NoCheck;
 
-            ///Set appropriate service's certificate on the host. Use CertManager class to obtain the certificate based on the "srvCertCN"
-            host.Credentials.ServiceCertificate.Certificate = CertManager.GetCertificateFromStorage(StoreName.My, StoreLocation.LocalMachine, srvCertCN);
+            // Dobavljanje sertifikata
+            var serviceCert = CertManager.GetCertificateFromStorage(StoreName.My, StoreLocation.LocalMachine, srvCertCN);
+
+            if (serviceCert == null)
+            {
+                Console.WriteLine($"[ERROR] Sertifikat sa CN={srvCertCN} nije pronađen. Prekida se pokretanje servisa.");
+                return; // Prekidamo dalje pokretanje
+            }
+
+            // Postavljanje sertifikata servisa
+            host.Credentials.ServiceCertificate.Certificate = serviceCert;
+
+            //host.Authorization.ImpersonateCallerForAllOperations = true;
 
             try
             {
@@ -47,7 +56,10 @@ namespace Service
             }
             finally
             {
-                host.Close();
+                if (host.State == CommunicationState.Opened)
+                {
+                    host.Close();
+                }
             }
         }
     }

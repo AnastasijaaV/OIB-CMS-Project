@@ -10,3 +10,28 @@ C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB
 C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB-CMS-Project\CMS\Client\obj\Debug\Client.csproj.Up2Date
 C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB-CMS-Project\CMS\Client\obj\Debug\Client.exe
 C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB-CMS-Project\CMS\Client\obj\Debug\Client.pdb
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\Client\bin\Debug\Client.exe.config
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\Client\bin\Debug\Client.exe
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\Client\bin\Debug\Client.pdb
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\Client\bin\Debug\Contracts.dll
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\Client\bin\Debug\Manager.dll
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\Client\bin\Debug\Contracts.pdb
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\Client\bin\Debug\Manager.pdb
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\Client\obj\Debug\Client.csproj.Up2Date
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\Client\obj\Debug\Client.exe
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\Client\obj\Debug\Client.pdb
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Client\bin\Debug\Client.exe.config
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Client\bin\Debug\Client.exe
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Client\bin\Debug\Client.pdb
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Client\bin\Debug\Contracts.dll
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Client\bin\Debug\Manager.dll
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Client\bin\Debug\Contracts.pdb
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Client\bin\Debug\Manager.pdb
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Client\obj\Debug\Client.exe.config
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Client\obj\Debug\Client.csproj.Up2Date
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Client\obj\Debug\Client.exe
+C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Client\obj\Debug\Client.pdb

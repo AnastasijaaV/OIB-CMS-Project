@@ -4,3 +4,12 @@ C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB
 C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\CertificateManager.csproj.CoreCompileInputs.cache
 C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\CertificateManagerService.dll
 C:\Users\Milica\Desktop\cetvrta god\osnove informacione bezbednosti\projekat\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\CertificateManagerService.pdb
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\CertificateManagerService\bin\Debug\CertificateManagerService.exe
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\CertificateManagerService\bin\Debug\CertificateManagerService.pdb
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\CertificateManagerService\bin\Debug\Contracts.dll
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\CertificateManagerService\bin\Debug\Contracts.pdb
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\CertificateManager.csproj.AssemblyReference.cache
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\CertificateManager.csproj.CoreCompileInputs.cache
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\Certific.36225EB2.Up2Date
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\CertificateManagerService.exe
+C:\Users\Korisnik\Desktop\OIB\projekat\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\CertificateManagerService.pdb
