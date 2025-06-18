@@ -149,6 +149,26 @@ namespace CertificateManager
                     var certificate = request.CreateSelfSigned(DateTimeOffset.Now, DateTimeOffset.Now.AddYears(1));
                     byte[] certData = certificate.Export(X509ContentType.Pfx, "password");
                     File.WriteAllBytes(certPath, certData);
+
+                    X509Certificate2 newCert = new X509Certificate2(certPath, "password", X509KeyStorageFlags.PersistKeySet);
+
+                    using (X509Store store = new X509Store(StoreName.My, StoreLocation.LocalMachine))
+                    {
+                        store.Open(OpenFlags.ReadWrite);
+                        store.Add(newCert);
+
+                        store.Close();
+                    }
+                    Console.WriteLine("✔ Sertifikat dodat u CurrentUser//My store.");
+
+                    using (X509Store trusted = new X509Store(StoreName.TrustedPeople, StoreLocation.LocalMachine))
+                    {
+                        trusted.Open(OpenFlags.ReadWrite);
+                        trusted.Add(newCert);
+                        trusted.Close();
+                    }
+
+                    Console.WriteLine("✔ Sertifikat dodat u CurrentUser/My i TrustedPeople store.");
                 }
 
                 Console.WriteLine($"✔ Sertifikat izdat za {identity.Name} sa OU={userGroup}");
