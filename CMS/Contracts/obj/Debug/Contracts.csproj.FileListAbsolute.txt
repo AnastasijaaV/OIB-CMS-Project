@@ -16,3 +16,9 @@ C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.csproj.Asse
 C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.csproj.CoreCompileInputs.cache
 C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.dll
 C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.pdb
+C:\jj\OsnoveBezbednosti\OIB-CMS-Project\CMS\Contracts\bin\Debug\Contracts.dll
+C:\jj\OsnoveBezbednosti\OIB-CMS-Project\CMS\Contracts\bin\Debug\Contracts.pdb
+C:\jj\OsnoveBezbednosti\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.csproj.AssemblyReference.cache
+C:\jj\OsnoveBezbednosti\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.csproj.CoreCompileInputs.cache
+C:\jj\OsnoveBezbednosti\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.dll
+C:\jj\OsnoveBezbednosti\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.pdb

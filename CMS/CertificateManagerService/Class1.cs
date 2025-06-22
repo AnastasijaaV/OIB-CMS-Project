@@ -46,6 +46,7 @@ namespace CertificateManager
                     File.WriteAllBytes(certPath, certData);
                 }
 
+                ReplicateData(); // ✅ dodato
                 LogEvent($"Certificate created for {subjectName}. Path: {certPath}", EventLogEntryType.Information);
             }
             catch (Exception ex)
@@ -57,9 +58,7 @@ namespace CertificateManager
 
         public void RevokeCertificate(string serialNumber)
         {
-            //2
             Console.WriteLine($"[RevokeCertificate] Poziv sa serialNumber: {serialNumber}");
-            //--
 
             try
             {
@@ -67,6 +66,7 @@ namespace CertificateManager
                 NotifyClientsOfRevocation(serialNumber);
                 CreateCertificate("NewCertFor_" + serialNumber, true);
 
+                ReplicateData(); // ✅ dodato
                 LogEvent($"Certificate revoked and renewed. Serial Number: {serialNumber}", EventLogEntryType.Warning);
             }
             catch (Exception ex)
@@ -86,7 +86,11 @@ namespace CertificateManager
 
                 foreach (var file in Directory.GetFiles(CertificateFolder))
                 {
-                    File.Copy(file, Path.Combine(backupPath, Path.GetFileName(file)), overwrite: true);
+                    string fileName = Path.GetFileName(file);
+                    if (fileName == "RevocationList.txt" || fileName.EndsWith(".pfx"))
+                    {
+                        File.Copy(file, Path.Combine(backupPath, fileName), overwrite: true);
+                    }
                 }
 
                 LogEvent("Data replicated to backup successfully.", EventLogEntryType.Information);
@@ -109,7 +113,6 @@ namespace CertificateManager
             {
                 Console.WriteLine($">> RequestCertificate called for {windowsUsername}");
 
-                // ✅ koristi aktivno prijavljenog korisnika
                 WindowsIdentity identity = WindowsIdentity.GetCurrent();
                 WindowsPrincipal principal = new WindowsPrincipal(identity);
 
@@ -156,7 +159,6 @@ namespace CertificateManager
                     {
                         store.Open(OpenFlags.ReadWrite);
                         store.Add(newCert);
-
                         store.Close();
                     }
                     Console.WriteLine("✔ Sertifikat dodat u CurrentUser//My store.");
@@ -174,6 +176,7 @@ namespace CertificateManager
                 Console.WriteLine($"✔ Sertifikat izdat za {identity.Name} sa OU={userGroup}");
                 LogEvent($"✔ Sertifikat izdat za {identity.Name} sa OU={userGroup}.", EventLogEntryType.Information);
 
+                ReplicateData(); // ✅ dodato
 
                 return true;
             }
@@ -184,6 +187,7 @@ namespace CertificateManager
                 return false;
             }
         }
+
         private void LogEvent(string message, EventLogEntryType entryType)
         {
             string source = "CertificateManagerService";
@@ -203,7 +207,7 @@ namespace CertificateManager
             string address = "net.tcp://localhost:8888/CertificateManagerService";
             ServiceHost host = new ServiceHost(typeof(CertificateManagerService));
 
-            NetTcpBinding binding = new NetTcpBinding(SecurityMode.None); // ⬅️ bitno
+            NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
 
             host.AddServiceEndpoint(typeof(ICertificateManagerService), binding, address);
 
