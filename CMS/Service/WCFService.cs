@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.ServiceModel;
 using System.Security.Cryptography.X509Certificates;
+using System.Diagnostics;
 
 namespace Service
 {
@@ -13,7 +14,6 @@ namespace Service
         [OperationBehavior(Impersonation = ImpersonationOption.NotAllowed)]
         public void TestCommunication(int id)
         {
-            // Prikaz svih claim-ova za debagovanje
             foreach (var cs in ServiceSecurityContext.Current.AuthorizationContext.ClaimSets)
             {
                 foreach (var claim in cs)
@@ -34,7 +34,6 @@ namespace Service
                     return;
                 }
 
-                // Pravilno parsiranje DistinguishedName iz sertifikata
                 string dn = (certClaim.Resource as X500DistinguishedName)?.Name;
                 if (string.IsNullOrWhiteSpace(dn))
                 {
@@ -42,7 +41,6 @@ namespace Service
                     return;
                 }
 
-                // Parsiranje CN i OU iz DN stringa
                 string cn = dn.Split(',')
                               .Select(p => p.Trim())
                               .FirstOrDefault(p => p.StartsWith("CN="))?
@@ -58,7 +56,6 @@ namespace Service
                     return;
                 }
 
-                // Provera dozvoljenih grupa
                 string[] allowedGroups = { "RegionEast", "RegionWest", "RegionNorth", "RegionSouth" };
                 if (!allowedGroups.Contains(ou))
                 {
@@ -66,7 +63,8 @@ namespace Service
                     return;
                 }
 
-                // Logovanje u fajl
+                LogEvent($"Nova konekcija: Klijent {cn} iz OU={ou} je uspešno pristupio.", EventLogEntryType.Information);
+
                 string certFolder = @"C:\Certificates";
                 string logPath = Path.Combine(certFolder, "Log.txt");
 
@@ -89,6 +87,17 @@ namespace Service
             {
                 Console.WriteLine("❌ GRESKA u TestCommunication: " + ex.Message);
             }
+        }
+
+        private void LogEvent(string message, EventLogEntryType entryType)
+        {
+            string source = "WCFService";
+            string log = "Application";
+
+            if (!EventLog.SourceExists(source))
+                EventLog.CreateEventSource(source, log);
+
+            EventLog.WriteEntry(source, message, entryType);
         }
     }
 }

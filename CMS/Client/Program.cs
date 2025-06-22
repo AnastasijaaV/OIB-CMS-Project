@@ -6,6 +6,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Security.Principal;
 using System.ServiceModel;
+using System.ServiceModel.Channels;
 using System.Threading;
 
 namespace Client
@@ -80,24 +81,30 @@ namespace Client
                         break;
 
                     case "4":
-                        Console.WriteLine("🚀 Pokrećem periodičnu komunikaciju (CTRL+C za prekid)...");
+                        Console.WriteLine("🚀 Pokrećem periodičnu komunikaciju (CTRL+C ili 5 za prekid)...");
 
                         string receiverAddress = "net.tcp://localhost:9999/Receiver";
                         NetTcpBinding receiverBinding = new NetTcpBinding(SecurityMode.Transport);
                         receiverBinding.Security.Transport.ClientCredentialType = TcpClientCredentialType.Certificate;
 
-                        // ✔ DNS identitet mora da se poklapa sa CN iz server sertifikata (npr. "wcfservice")
                         var identity = new DnsEndpointIdentity("wcfservice");
 
-                        // ✔ Endpoint sa eksplicitnim DNS identitetom
-                        var client = new WCFClient(receiverBinding, new EndpointAddress(new Uri(receiverAddress), identity));
-
-                        int id = 1;
-                        while (true)
+                        using (var client = new WCFClient(receiverBinding, new EndpointAddress(new Uri(receiverAddress), identity)))
                         {
-                            client.TestCommunication(id++); // bez parametra jer metoda nema parametar
-                            int delay = new Random().Next(1000, 10000); // 1–10 sekundi
-                            Thread.Sleep(delay);
+                            Console.CancelKeyPress += (sender, e) =>
+                            {
+                                Console.WriteLine("\n🔌 Detektirano zatvaranje (CTRL+C).");
+                                client.Dispose();
+                                Environment.Exit(0);
+                            };
+
+                            int id = 1;
+                            while (true)
+                            {
+                                client.TestCommunication(id++);
+                                int delay = new Random().Next(1000, 10000);
+                                Thread.Sleep(delay);
+                            }
                         }
 
                     case "5":

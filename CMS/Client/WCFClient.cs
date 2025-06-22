@@ -5,6 +5,7 @@ using Manager;
 using System.Security.Principal;
 using Contracts;
 using System.ServiceModel.Security;
+using System.Diagnostics;
 
 namespace Client
 {
@@ -15,8 +16,7 @@ namespace Client
         public WCFClient(NetTcpBinding binding, EndpointAddress address)
             : base(binding, address)
         {
-            // ✅ Koristimo puni CN iz Windows identiteta
-            string cltCertCN = WindowsIdentity.GetCurrent().Name; // npr: DESKTOP-CNKKSF4\wcfclient
+            string cltCertCN = WindowsIdentity.GetCurrent().Name;
 
             var cert = CertManager.GetCertificateFromStorage(StoreName.My, StoreLocation.LocalMachine, cltCertCN);
 
@@ -30,7 +30,6 @@ namespace Client
                 Console.WriteLine($"✅ Klijentski sertifikat pronađen: {cert.Subject}");
             }
 
-            // ⚙️ Podešavanje validacije
             this.Credentials.ServiceCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.ChainTrust;
             this.Credentials.ServiceCertificate.Authentication.RevocationMode = X509RevocationMode.NoCheck;
 
@@ -60,9 +59,21 @@ namespace Client
 
             try
             {
+                LogEvent($"Prekinuta komunikacija: Klijent {WindowsIdentity.GetCurrent().Name} zatvorio konekciju.", EventLogEntryType.Information);
                 this.Close();
             }
             catch { }
+        }
+
+        private void LogEvent(string message, EventLogEntryType entryType)
+        {
+            string source = "WCFClient";
+            string log = "Application";
+
+            if (!EventLog.SourceExists(source))
+                EventLog.CreateEventSource(source, log);
+
+            EventLog.WriteEntry(source, message, entryType);
         }
     }
 }
