@@ -8,9 +8,11 @@ using System.Diagnostics;
 
 namespace Service
 {
-    [ServiceBehavior(IncludeExceptionDetailInFaults = true)]
+    [ServiceBehavior(IncludeExceptionDetailInFaults = true, InstanceContextMode = InstanceContextMode.PerSession)]
     public class WCFService : IWCFContract
     {
+        private string _cachedClientCN = "Nepoznat";
+
         [OperationBehavior(Impersonation = ImpersonationOption.NotAllowed)]
         public void TestCommunication(int id)
         {
@@ -24,6 +26,16 @@ namespace Service
 
             try
             {
+                OperationContext.Current.InstanceContext.Closed += (sender, e) =>
+                {
+                    LogEvent($"🔴 Komunikacija prekinuta: Klijent {_cachedClientCN}.", EventLogEntryType.Information);
+                };
+
+                OperationContext.Current.InstanceContext.Faulted += (sender, e) =>
+                {
+                    LogEvent($"⚠️ Komunikacija faultovana: Klijent {_cachedClientCN}.", EventLogEntryType.Warning);
+                };
+
                 var certClaim = ServiceSecurityContext.Current.AuthorizationContext.ClaimSets
                     .SelectMany(cs => cs)
                     .FirstOrDefault(c => c.ClaimType == System.IdentityModel.Claims.ClaimTypes.X500DistinguishedName);
@@ -41,16 +53,10 @@ namespace Service
                     return;
                 }
 
-                string cn = dn.Split(',')
-                              .Select(p => p.Trim())
-                              .FirstOrDefault(p => p.StartsWith("CN="))?
-                              .Substring(3);
-                string ou = dn.Split(',')
-                              .Select(p => p.Trim())
-                              .FirstOrDefault(p => p.StartsWith("OU="))?
-                              .Substring(3);
+                _cachedClientCN = dn.Split(',').Select(p => p.Trim()).FirstOrDefault(p => p.StartsWith("CN="))?.Substring(3);
+                string ou = dn.Split(',').Select(p => p.Trim()).FirstOrDefault(p => p.StartsWith("OU="))?.Substring(3);
 
-                if (string.IsNullOrWhiteSpace(cn) || string.IsNullOrWhiteSpace(ou))
+                if (string.IsNullOrWhiteSpace(_cachedClientCN) || string.IsNullOrWhiteSpace(ou))
                 {
                     Console.WriteLine("❌ Ne mogu da pročitam CN ili OU iz DN: " + dn);
                     return;
@@ -59,11 +65,11 @@ namespace Service
                 string[] allowedGroups = { "RegionEast", "RegionWest", "RegionNorth", "RegionSouth" };
                 if (!allowedGroups.Contains(ou))
                 {
-                    Console.WriteLine($"❌ Klijent {cn} NIJE član dozvoljene grupe OU={ou}. Preskačem logovanje.");
+                    Console.WriteLine($"❌ Klijent {_cachedClientCN} NIJE član dozvoljene grupe OU={ou}. Preskačem logovanje.");
                     return;
                 }
 
-                LogEvent($"Nova konekcija: Klijent {cn} iz OU={ou} je uspešno pristupio.", EventLogEntryType.Information);
+                LogEvent($"Nova konekcija: Klijent {_cachedClientCN} iz OU={ou} je uspešno pristupio.", EventLogEntryType.Information);
 
                 string certFolder = @"C:\Certificates";
                 string logPath = Path.Combine(certFolder, "Log.txt");
@@ -78,7 +84,7 @@ namespace Service
                 int newId = lines.Length + 1;
 
                 string timestamp = DateTime.Now.ToString("dd.MM.yyyy. HH:mm:ss");
-                string logLine = $"{newId}:{timestamp};{cn}";
+                string logLine = $"{newId}:{timestamp};{_cachedClientCN}";
 
                 File.AppendAllText(logPath, logLine + Environment.NewLine);
                 Console.WriteLine($"🟢 Upisano u log: {logLine}");

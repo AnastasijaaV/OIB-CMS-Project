@@ -42,6 +42,7 @@ namespace Client
         {
             try
             {
+                Console.WriteLine($"[Client] Slanje ID={id} serveru...");
                 factory?.TestCommunication(id);
             }
             catch (Exception e)
@@ -52,17 +53,25 @@ namespace Client
 
         public void Dispose()
         {
-            if (factory != null)
-            {
-                factory = null;
-            }
-
             try
             {
-                LogEvent($"Prekinuta komunikacija: Klijent {WindowsIdentity.GetCurrent().Name} zatvorio konekciju.", EventLogEntryType.Information);
+                string username = WindowsIdentity.GetCurrent().Name;
+                string msg = $"Klijent {username} zatvara konekciju.";
+
+                Console.WriteLine($"🔴 {msg}");
+                LogEvent($"Prekinuta komunikacija: {msg}", EventLogEntryType.Information);
+
+                if (factory is ICommunicationObject commObj && commObj.State == CommunicationState.Opened)
+                {
+                    commObj.Close();
+                }
+
                 this.Close();
             }
-            catch { }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"⚠️ Greška pri zatvaranju: {ex.Message}");
+            }
         }
 
         private void LogEvent(string message, EventLogEntryType entryType)

@@ -90,6 +90,7 @@ namespace CertificateManager
                     if (fileName == "RevocationList.txt" || fileName.EndsWith(".pfx"))
                     {
                         File.Copy(file, Path.Combine(backupPath, fileName), overwrite: true);
+
                     }
                 }
 
@@ -104,7 +105,22 @@ namespace CertificateManager
 
         public void NotifyClientsOfRevocation(string serialNumber)
         {
-            Console.WriteLine($"Clients notified of certificate revocation: {serialNumber}");
+            try
+            {
+                string msg = $"Obaveštenje o revokaciji poslato (simulacija) za sertifikat sa SN={serialNumber}.";
+                Console.WriteLine($"📢 {msg}");
+
+                // Simulacija slanja: upis u fajl
+                string notifPath = Path.Combine(CertificateFolder, "RevocationNotifications.txt");
+                File.AppendAllText(notifPath, $"{DateTime.Now:dd.MM.yyyy. HH:mm:ss} - {msg}{Environment.NewLine}");
+
+                // Logovanje u EventLog
+                LogEvent(msg, EventLogEntryType.Information);
+            }
+            catch (Exception ex)
+            {
+                LogEvent($"Greška prilikom slanja obaveštenja: {ex.Message}", EventLogEntryType.Error);
+            }
         }
 
         public bool RequestCertificate(string windowsUsername)
