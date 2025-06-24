@@ -28,7 +28,7 @@ namespace Client
 
             while (true)
             {
-                Console.WriteLine("\n📋 MENI:");
+                Console.WriteLine("\nMENI:");
                 Console.WriteLine("1. Kreiraj sertifikat");
                 Console.WriteLine("2. Povuci (revoke) sertifikat");
                 Console.WriteLine("3. Auto provera i automatska revokacija");
@@ -43,45 +43,45 @@ namespace Client
                     case "1":
                         bool success = certService.RequestCertificate(currentUser);
                         if (success)
-                            Console.WriteLine($"✔ Sertifikat izdat za korisnika {currentUser}.");
+                            Console.WriteLine($"Sertifikat izdat za korisnika {currentUser}.");
                         else
-                            Console.WriteLine("❌ Korisnik nije u dozvoljenoj grupi ili greška.");
+                            Console.WriteLine("Korisnik nije u dozvoljenoj grupi ili greška.");
                         break;
 
                     case "2":
-                        Console.Write("🔑 Unesi serial number sertifikata za povlačenje: ");
+                        Console.Write("Unesi serial number sertifikata za povlačenje: ");
                         string serialInput = Console.ReadLine();
                         certService.RevokeCertificate(serialInput);
-                        Console.WriteLine("🔁 Revokacija pokrenuta.");
+                        Console.WriteLine("Revokacija pokrenuta.");
                         break;
 
                     case "3":
                         if (!File.Exists(certPath))
                         {
-                            Console.WriteLine("❌ Sertifikat nije pronađen na disku.");
+                            Console.WriteLine("Sertifikat nije pronađen na disku.");
                             break;
                         }
 
                         X509Certificate2 cert = new X509Certificate2(certPath, "password");
                         string serial = cert.SerialNumber.ToLower();
 
-                        Console.WriteLine($"🔍 Serial number: {serial}");
+                        Console.WriteLine($"Serial number: {serial}");
 
                         string revPath = "C:\\Certificates\\RevocationList.txt";
                         if (File.Exists(revPath) &&
                             File.ReadAllLines(revPath).Contains(serial))
                         {
-                            Console.WriteLine("⚠️ Sertifikat je kompromitovan. Pokrećem automatsku revokaciju...");
+                            Console.WriteLine("Sertifikat je kompromitovan. Pokrećem automatsku revokaciju...");
                             certService.RevokeCertificate(serial);
                         }
                         else
                         {
-                            Console.WriteLine("✅ Sertifikat je važeći.");
+                            Console.WriteLine("Sertifikat je važeći.");
                         }
                         break;
 
                     case "4":
-                        Console.WriteLine("🚀 Pokrećem periodičnu komunikaciju (CTRL+C ili 5 za prekid)...");
+                        Console.WriteLine("Pokrećem periodičnu komunikaciju (CTRL+C ili 5 za prekid)...");
 
                         string receiverAddress = "net.tcp://localhost:9999/Receiver";
                         NetTcpBinding receiverBinding = new NetTcpBinding(SecurityMode.Transport);
@@ -93,7 +93,7 @@ namespace Client
                         {
                             Console.CancelKeyPress += (sender, e) =>
                             {
-                                Console.WriteLine("\n🔌 Detektirano zatvaranje (CTRL+C).");
+                                Console.WriteLine("\n Detektirano zatvaranje (CTRL+C).");
                                 client.Dispose();
                                 Environment.Exit(0);
                             };
@@ -108,11 +108,11 @@ namespace Client
                         }
 
                     case "5":
-                        Console.WriteLine("👋 Izlaz iz programa.");
+                        Console.WriteLine("Izlaz iz programa.");
                         return;
 
                     default:
-                        Console.WriteLine("⚠️ Nevažeća opcija. Pokušaj ponovo.");
+                        Console.WriteLine("Nevažeća opcija. Pokušaj ponovo.");
                         break;
                 }
             }

@@ -18,24 +18,6 @@ namespace Manager
 		/// <param name="storeLocation"></param>
 		/// <param name="subjectName"></param>
 		/// <returns> The requested certificate. If no valid certificate is found, returns null. </returns>
-		/*public static X509Certificate2 GetCertificateFromStorage(StoreName storeName, StoreLocation storeLocation, string subjectName)
-        {
-            X509Store store = new X509Store(storeName, storeLocation);
-            store.Open(OpenFlags.ReadOnly);
-
-            X509Certificate2Collection certCollection = store.Certificates.Find(X509FindType.FindBySubjectName, subjectName, true);
-
-            /// Check whether the subjectName of the certificate is exactly the same as the given "subjectName"
-            foreach (X509Certificate2 c in certCollection)
-            {
-                if (c.SubjectName.Name.Equals(string.Format("CN={0}", subjectName)))
-                {
-                    return c;
-                }
-            }
-
-            return null;
-        }*/
 
         public static X509Certificate2 GetCertificateFromStorage(StoreName storeName, StoreLocation storeLocation, string subjectName)
         {
@@ -53,12 +35,12 @@ namespace Manager
             {
                 if (!revokedLines.Contains(c.SerialNumber, StringComparer.OrdinalIgnoreCase))
                 {
-                    Console.WriteLine($"[CertManager] ✅ Pronađen VALIDAN sertifikat: {c.Subject} (SN={c.SerialNumber})");
+                    Console.WriteLine($"[CertManager] Pronađen VALIDAN sertifikat: {c.Subject} (SN={c.SerialNumber})");
                     return c;
                 }
             }
 
-            Console.WriteLine($"[CertManager] ❌ Nijedan validan sertifikat nije pronađen za {subjectName}.");
+            Console.WriteLine($"[CertManager] Nijedan validan sertifikat nije pronađen za {subjectName}.");
             return null;
         }
 

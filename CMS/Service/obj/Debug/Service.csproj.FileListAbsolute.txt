@@ -47,3 +47,16 @@ C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Service\obj\Debug\Service.csproj.
 C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Service\obj\Debug\Service.csproj.Up2Date
 C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Service\obj\Debug\Service.exe
 C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Service\obj\Debug\Service.pdb
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Service\bin\Debug\Service.exe.config
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Service\bin\Debug\Service.exe
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Service\bin\Debug\Service.pdb
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Service\bin\Debug\Contracts.dll
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Service\bin\Debug\Manager.dll
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Service\bin\Debug\Contracts.pdb
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Service\bin\Debug\Manager.pdb
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Service\obj\Debug\Service.csproj.AssemblyReference.cache
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Service\obj\Debug\Service.exe.config
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Service\obj\Debug\Service.csproj.CoreCompileInputs.cache
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Service\obj\Debug\Service.csproj.Up2Date
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Service\obj\Debug\Service.exe
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Service\obj\Debug\Service.pdb

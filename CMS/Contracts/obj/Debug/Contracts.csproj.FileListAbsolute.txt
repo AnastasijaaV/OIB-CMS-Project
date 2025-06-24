@@ -28,3 +28,9 @@ C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.csp
 C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.csproj.CoreCompileInputs.cache
 C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.dll
 C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.pdb
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Contracts\bin\Debug\Contracts.dll
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Contracts\bin\Debug\Contracts.pdb
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.csproj.AssemblyReference.cache
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.csproj.CoreCompileInputs.cache
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.dll
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.pdb

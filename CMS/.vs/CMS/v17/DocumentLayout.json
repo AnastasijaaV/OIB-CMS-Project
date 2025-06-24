@@ -1,42 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\",
+  "WorkspaceRootPath": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{631ED56E-7D03-4F4C-AFA5-9E15928BF2A6}|Service\\Service.csproj|c:\\jj\\osnoveinfbezbednosti\\oib-cms-project\\cms\\service\\wcfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{631ED56E-7D03-4F4C-AFA5-9E15928BF2A6}|Service\\Service.csproj|d:\\cetvrta godina\\oib-projekat-konacna-verzija\\oib-cms-project\\cms\\service\\wcfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{631ED56E-7D03-4F4C-AFA5-9E15928BF2A6}|Service\\Service.csproj|solutionrelative:service\\wcfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{631ED56E-7D03-4F4C-AFA5-9E15928BF2A6}|Service\\Service.csproj|C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{631ED56E-7D03-4F4C-AFA5-9E15928BF2A6}|Service\\Service.csproj|D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{631ED56E-7D03-4F4C-AFA5-9E15928BF2A6}|Service\\Service.csproj|solutionrelative:service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C182DEF-212C-4B94-AEA2-2081174A7230}|Manager\\Manager.csproj|C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\manager\\certmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C182DEF-212C-4B94-AEA2-2081174A7230}|Manager\\Manager.csproj|solutionrelative:manager\\certmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8500E600-F642-4870-9011-981D4DF0A2C9}|Client\\Client.csproj|C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\client\\wcfclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8500E600-F642-4870-9011-981D4DF0A2C9}|Client\\Client.csproj|solutionrelative:client\\wcfclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8500E600-F642-4870-9011-981D4DF0A2C9}|Client\\Client.csproj|C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8500E600-F642-4870-9011-981D4DF0A2C9}|Client\\Client.csproj|solutionrelative:client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{496D594A-76B2-40A1-8F51-5325E31B265B}|CertificateManagerService\\CertificateManager.csproj|C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\certificatemanagerservice\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{496D594A-76B2-40A1-8F51-5325E31B265B}|CertificateManagerService\\CertificateManager.csproj|solutionrelative:certificatemanagerservice\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C182DEF-212C-4B94-AEA2-2081174A7230}|Manager\\Manager.csproj|C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\manager\\formatter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3C182DEF-212C-4B94-AEA2-2081174A7230}|Manager\\Manager.csproj|D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\manager\\formatter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C182DEF-212C-4B94-AEA2-2081174A7230}|Manager\\Manager.csproj|solutionrelative:manager\\formatter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD3E0E80-5F27-40A7-8994-9C3393B856E3}|Contracts\\Contracts.csproj|C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\contracts\\iwcfcontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3C182DEF-212C-4B94-AEA2-2081174A7230}|Manager\\Manager.csproj|D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\manager\\certmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C182DEF-212C-4B94-AEA2-2081174A7230}|Manager\\Manager.csproj|solutionrelative:manager\\certmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3E0E80-5F27-40A7-8994-9C3393B856E3}|Contracts\\Contracts.csproj|D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\contracts\\iwcfcontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD3E0E80-5F27-40A7-8994-9C3393B856E3}|Contracts\\Contracts.csproj|solutionrelative:contracts\\iwcfcontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD3E0E80-5F27-40A7-8994-9C3393B856E3}|Contracts\\Contracts.csproj|C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\contracts\\icertificatemanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DD3E0E80-5F27-40A7-8994-9C3393B856E3}|Contracts\\Contracts.csproj|D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\contracts\\icertificatemanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD3E0E80-5F27-40A7-8994-9C3393B856E3}|Contracts\\Contracts.csproj|solutionrelative:contracts\\icertificatemanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8500E600-F642-4870-9011-981D4DF0A2C9}|Client\\Client.csproj|D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\client\\wcfclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8500E600-F642-4870-9011-981D4DF0A2C9}|Client\\Client.csproj|solutionrelative:client\\wcfclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8500E600-F642-4870-9011-981D4DF0A2C9}|Client\\Client.csproj|D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8500E600-F642-4870-9011-981D4DF0A2C9}|Client\\Client.csproj|solutionrelative:client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{496D594A-76B2-40A1-8F51-5325E31B265B}|CertificateManagerService\\CertificateManager.csproj|D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\certificatemanagerservice\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{496D594A-76B2-40A1-8F51-5325E31B265B}|CertificateManagerService\\CertificateManager.csproj|solutionrelative:certificatemanagerservice\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3E0E80-5F27-40A7-8994-9C3393B856E3}|Contracts\\Contracts.csproj|d:\\cetvrta godina\\oib-projekat-konacna-verzija\\oib-cms-project\\cms\\contracts\\ibackupcontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3E0E80-5F27-40A7-8994-9C3393B856E3}|Contracts\\Contracts.csproj|solutionrelative:contracts\\ibackupcontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70A05BFD-5E23-4B0A-B8A5-D624AB78FC66}|Backup\\Backup.csproj|d:\\cetvrta godina\\oib-projekat-konacna-verzija\\oib-cms-project\\cms\\backup\\backupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70A05BFD-5E23-4B0A-B8A5-D624AB78FC66}|Backup\\Backup.csproj|solutionrelative:backup\\backupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70A05BFD-5E23-4B0A-B8A5-D624AB78FC66}|Backup\\Backup.csproj|d:\\cetvrta godina\\oib-projekat-konacna-verzija\\oib-cms-project\\cms\\backup\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70A05BFD-5E23-4B0A-B8A5-D624AB78FC66}|Backup\\Backup.csproj|solutionrelative:backup\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|CertificateManager||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
@@ -49,129 +61,179 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 12,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
+              "Title": "IBackupContract.cs",
+              "DocumentMoniker": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\Contracts\\IBackupContract.cs",
+              "RelativeDocumentMoniker": "Contracts\\IBackupContract.cs",
+              "ToolTip": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\Contracts\\IBackupContract.cs",
+              "RelativeToolTip": "Contracts\\IBackupContract.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T17:25:56.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BackupService.cs",
+              "DocumentMoniker": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\Backup\\BackupService.cs",
+              "RelativeDocumentMoniker": "Backup\\BackupService.cs",
+              "ToolTip": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\Backup\\BackupService.cs",
+              "RelativeToolTip": "Backup\\BackupService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T17:25:23.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\CertificateManagerService\\Class1.cs",
+              "DocumentMoniker": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\CertificateManagerService\\Class1.cs",
               "RelativeDocumentMoniker": "CertificateManagerService\\Class1.cs",
-              "ToolTip": "C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\CertificateManagerService\\Class1.cs",
+              "ToolTip": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\CertificateManagerService\\Class1.cs",
               "RelativeToolTip": "CertificateManagerService\\Class1.cs",
-              "ViewState": "AgIAANMAAAAAAAAAAAAAACcBAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABYBAAAAAAAAAAAIwDMBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-19T16:40:12.694Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Formatter.cs",
-              "DocumentMoniker": "C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\Manager\\Formatter.cs",
-              "RelativeDocumentMoniker": "Manager\\Formatter.cs",
-              "ToolTip": "C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\Manager\\Formatter.cs",
-              "RelativeToolTip": "Manager\\Formatter.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAQwCYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-17T12:57:26.725Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WCFService.cs",
-              "DocumentMoniker": "C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\Service\\WCFService.cs",
-              "RelativeDocumentMoniker": "Service\\WCFService.cs",
-              "ToolTip": "C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\Service\\WCFService.cs",
-              "RelativeToolTip": "Service\\WCFService.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAYwGcAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-17T13:10:06.756Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\Client\\Program.cs",
+              "DocumentMoniker": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\Client\\Program.cs",
               "RelativeDocumentMoniker": "Client\\Program.cs",
-              "ToolTip": "C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\Client\\Program.cs",
+              "ToolTip": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\Client\\Program.cs",
               "RelativeToolTip": "Client\\Program.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAYwG8AAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAIwHgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-17T11:41:11.594Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "WCFClient.cs",
-              "DocumentMoniker": "C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\Client\\WCFClient.cs",
+              "DocumentMoniker": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\Client\\WCFClient.cs",
               "RelativeDocumentMoniker": "Client\\WCFClient.cs",
-              "ToolTip": "C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\Client\\WCFClient.cs",
+              "ToolTip": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\Client\\WCFClient.cs",
               "RelativeToolTip": "Client\\WCFClient.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAYwHoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAIwHoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-17T13:06:13.001Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ICertificateManagerService.cs",
+              "DocumentMoniker": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\Contracts\\ICertificateManagerService.cs",
+              "RelativeDocumentMoniker": "Contracts\\ICertificateManagerService.cs",
+              "ToolTip": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\Contracts\\ICertificateManagerService.cs",
+              "RelativeToolTip": "Contracts\\ICertificateManagerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T17:10:24.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IWCFContract.cs",
+              "DocumentMoniker": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\Contracts\\IWCFContract.cs",
+              "RelativeDocumentMoniker": "Contracts\\IWCFContract.cs",
+              "ToolTip": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\Contracts\\IWCFContract.cs",
+              "RelativeToolTip": "Contracts\\IWCFContract.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T13:02:14.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Formatter.cs",
+              "DocumentMoniker": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\Manager\\Formatter.cs",
+              "RelativeDocumentMoniker": "Manager\\Formatter.cs",
+              "ToolTip": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\Manager\\Formatter.cs",
+              "RelativeToolTip": "Manager\\Formatter.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T12:57:26.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "CertManager.cs",
-              "DocumentMoniker": "C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\Manager\\CertManager.cs",
+              "DocumentMoniker": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\Manager\\CertManager.cs",
               "RelativeDocumentMoniker": "Manager\\CertManager.cs",
-              "ToolTip": "C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\Manager\\CertManager.cs",
+              "ToolTip": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\Manager\\CertManager.cs",
               "RelativeToolTip": "Manager\\CertManager.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAYwFIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACoAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-17T13:00:32.835Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ICertificateManagerService.cs",
-              "DocumentMoniker": "C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\Contracts\\ICertificateManagerService.cs",
-              "RelativeDocumentMoniker": "Contracts\\ICertificateManagerService.cs",
-              "ToolTip": "C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\Contracts\\ICertificateManagerService.cs",
-              "RelativeToolTip": "Contracts\\ICertificateManagerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T17:10:24.666Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\Service\\Program.cs",
+              "DocumentMoniker": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\Service\\Program.cs",
               "RelativeDocumentMoniker": "Service\\Program.cs",
-              "ToolTip": "C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\Service\\Program.cs",
+              "ToolTip": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\Service\\Program.cs",
               "RelativeToolTip": "Service\\Program.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAYwEIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAIwEEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-17T12:53:05.784Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IWCFContract.cs",
-              "DocumentMoniker": "C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\Contracts\\IWCFContract.cs",
-              "RelativeDocumentMoniker": "Contracts\\IWCFContract.cs",
-              "ToolTip": "C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\Contracts\\IWCFContract.cs",
-              "RelativeToolTip": "Contracts\\IWCFContract.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "WCFService.cs",
+              "DocumentMoniker": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\Service\\WCFService.cs",
+              "RelativeDocumentMoniker": "Service\\WCFService.cs",
+              "ToolTip": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\Service\\WCFService.cs",
+              "RelativeToolTip": "Service\\WCFService.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAIwGwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-17T13:02:14.335Z"
+              "WhenOpened": "2025-01-17T13:10:06.756Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\Backup\\Program.cs",
+              "RelativeDocumentMoniker": "Backup\\Program.cs",
+              "ToolTip": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\Backup\\Program.cs",
+              "RelativeToolTip": "Backup\\Program.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAIwBwAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T17:23:55.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "CertificateManager",
-              "DocumentMoniker": "C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\CertificateManagerService\\CertificateManager.csproj",
+              "DocumentMoniker": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\CertificateManagerService\\CertificateManager.csproj",
               "RelativeDocumentMoniker": "CertificateManagerService\\CertificateManager.csproj",
-              "ToolTip": "C:\\jj\\OsnoveInfBezbednosti\\OIB-CMS-Project\\CMS\\CertificateManagerService\\CertificateManager.csproj",
+              "ToolTip": "D:\\CETVRTA GODINA\\OIB-Projekat-Konacna-Verzija\\OIB-CMS-Project\\CMS\\CertificateManagerService\\CertificateManager.csproj",
               "RelativeToolTip": "CertificateManagerService\\CertificateManager.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-06-13T16:46:35.368Z"

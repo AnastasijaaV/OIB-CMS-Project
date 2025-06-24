@@ -68,7 +68,7 @@ namespace CertificateManager
 
                 if (string.IsNullOrWhiteSpace(commonName))
                 {
-                    string msg = $"❌ Nije pronađen CN za serialNumber: {serialNumber}. Preskačem kreiranje novog sertifikata.";
+                    string msg = $"Nije pronađen CN za serialNumber: {serialNumber}. Preskačem kreiranje novog sertifikata.";
                     Console.WriteLine(msg);
                     LogEvent(msg, EventLogEntryType.Warning);
                     return; // Ovde prekidamo sve daljnje korake
@@ -111,7 +111,7 @@ namespace CertificateManager
                 }
             }
 
-            Console.WriteLine($"⚠️ Nije pronađen nijedan sertifikat sa SN={serialNumber}");
+            Console.WriteLine($"Nije pronađen nijedan sertifikat sa SN={serialNumber}");
             return null;
         }
 
@@ -119,25 +119,37 @@ namespace CertificateManager
         {
             try
             {
-                string backupPath = Path.Combine(CertificateFolder, "Backup");
-                if (!Directory.Exists(backupPath))
-                    Directory.CreateDirectory(backupPath);
+                NetTcpBinding binding = new NetTcpBinding(SecurityMode.Transport);
+                binding.Security.Transport.ClientCredentialType = TcpClientCredentialType.Windows;
+
+                string backupAddress = "net.tcp://localhost:9000/BackupService";
+
+                ChannelFactory<IBackupContract> factory = new ChannelFactory<IBackupContract>(
+                    binding,
+                    new EndpointAddress(backupAddress));
+
+                // Dozvoli impersonaciju za Windows autentifikaciju
+                factory.Credentials.Windows.AllowedImpersonationLevel = TokenImpersonationLevel.Impersonation;
+
+                IBackupContract proxy = factory.CreateChannel();
 
                 foreach (var file in Directory.GetFiles(CertificateFolder))
                 {
                     string fileName = Path.GetFileName(file);
                     if (fileName == "RevocationList.txt" || fileName.EndsWith(".pfx"))
                     {
-                        File.Copy(file, Path.Combine(backupPath, fileName), overwrite: true);
+                        byte[] content = File.ReadAllBytes(file);
+                        proxy.ReceiveBackup(fileName, content);
+                        Console.WriteLine($"Poslat fajl za backup: {fileName}");
                     }
                 }
 
-                LogEvent("Data replicated to backup successfully.", EventLogEntryType.Information);
+                LogEvent("Podaci uspešno replicirani na BackupService.", EventLogEntryType.Information);
             }
             catch (Exception ex)
             {
-                LogEvent($"Error replicating data: {ex.Message}", EventLogEntryType.Error);
-                throw;
+                Console.WriteLine($"Greška pri replikaciji: {ex.Message}");
+                LogEvent($"Greška pri repliciranju: {ex.Message}", EventLogEntryType.Error);
             }
         }
 
@@ -146,7 +158,7 @@ namespace CertificateManager
             try
             {
                 string msg = $"Obaveštenje o revokaciji poslato (simulacija) za sertifikat sa SN={serialNumber}.";
-                Console.WriteLine($"📢 {msg}");
+                Console.WriteLine($" {msg}");
 
                 string notifPath = Path.Combine(CertificateFolder, "RevocationNotifications.txt");
                 File.AppendAllText(notifPath, $"{DateTime.Now:dd.MM.yyyy. HH:mm:ss} - {msg}{Environment.NewLine}");
@@ -213,7 +225,7 @@ namespace CertificateManager
                         store.Add(newCert);
                         store.Close();
                     }
-                    Console.WriteLine("✔ Sertifikat dodat u CurrentUser//My store.");
+                    Console.WriteLine("Sertifikat dodat u CurrentUser//My store.");
 
                     using (X509Store trusted = new X509Store(StoreName.TrustedPeople, StoreLocation.LocalMachine))
                     {
@@ -222,11 +234,11 @@ namespace CertificateManager
                         trusted.Close();
                     }
 
-                    Console.WriteLine("✔ Sertifikat dodat u CurrentUser/My i TrustedPeople store.");
+                    Console.WriteLine("Sertifikat dodat u CurrentUser/My i TrustedPeople store.");
                 }
 
-                Console.WriteLine($"✔ Sertifikat izdat za {identity.Name} sa OU={userGroup}");
-                LogEvent($"✔ Sertifikat izdat za {identity.Name} sa OU={userGroup}.", EventLogEntryType.Information);
+                Console.WriteLine($"Sertifikat izdat za {identity.Name} sa OU={userGroup}");
+                LogEvent($"Sertifikat izdat za {identity.Name} sa OU={userGroup}.", EventLogEntryType.Information);
 
                 ReplicateData();
 
@@ -234,8 +246,8 @@ namespace CertificateManager
             }
             catch (Exception ex)
             {
-                Console.WriteLine("❌ GRESKA: " + ex.Message);
-                LogEvent($"❌ Greška prilikom izdavanja sertifikata: {ex.Message}", EventLogEntryType.Error);
+                Console.WriteLine("GRESKA: " + ex.Message);
+                LogEvent($"Greška prilikom izdavanja sertifikata: {ex.Message}", EventLogEntryType.Error);
                 return false;
             }
         }
@@ -280,12 +292,12 @@ namespace CertificateManager
             try
             {
                 host.Open();
-                Console.WriteLine("✅ CertificateManagerService is running. Press <Enter> to stop.");
+                Console.WriteLine("CertificateManagerService is running. Press <Enter> to stop.");
                 Console.ReadLine();
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"❌ Error: {ex.Message}");
+                Console.WriteLine($"Error: {ex.Message}");
             }
             finally
             {

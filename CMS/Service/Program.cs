@@ -16,7 +16,7 @@ namespace Service
     {
         static void Main(string[] args)
         {
-            // srvCertCN.SubjectName should be set to the service's username.
+
             string srvCertCN = "wcfservice";
 
             NetTcpBinding binding = new NetTcpBinding(SecurityMode.Transport);
@@ -41,7 +41,7 @@ namespace Service
             // Postavljanje sertifikata servisa
             host.Credentials.ServiceCertificate.Certificate = serviceCert;
 
-            //host.Authorization.ImpersonateCallerForAllOperations = true;
+
 
             try
             {

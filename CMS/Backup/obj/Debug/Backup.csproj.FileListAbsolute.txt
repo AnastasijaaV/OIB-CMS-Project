@@ -1,0 +1,10 @@
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Backup\bin\Debug\Backup.exe.config
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Backup\bin\Debug\Backup.exe
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Backup\bin\Debug\Backup.pdb
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Backup\bin\Debug\Contracts.dll
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Backup\bin\Debug\Contracts.pdb
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Backup\obj\Debug\Backup.csproj.AssemblyReference.cache
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Backup\obj\Debug\Backup.csproj.CoreCompileInputs.cache
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Backup\obj\Debug\Backup.csproj.Up2Date
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Backup\obj\Debug\Backup.exe
+D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Backup\obj\Debug\Backup.pdb

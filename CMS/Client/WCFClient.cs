@@ -23,7 +23,7 @@ namespace Client
             // Ako ne postoji validan sertifikat (nema ga ili je povučen)
             if (cert == null)
             {
-                Console.WriteLine($"⚠ Sertifikat za klijenta \"{cltCertCN}\" nije pronađen ili je povučen. Zahtevam novi...");
+                Console.WriteLine($"Sertifikat za klijenta \"{cltCertCN}\" nije pronađen ili je povučen. Zahtevam novi...");
 
                 try
                 {
@@ -47,23 +47,23 @@ namespace Client
 
                     if (cert == null)
                     {
-                        Console.WriteLine("❌ Novi sertifikat nije pronađen nakon zahteva. Komunikacija neće biti moguća.");
+                        Console.WriteLine("Novi sertifikat nije pronađen nakon zahteva. Komunikacija neće biti moguća.");
                         return;
                     }
                     else
                     {
-                        Console.WriteLine("✅ Novi sertifikat uspešno kreiran i dodat.");
+                        Console.WriteLine("Novi sertifikat uspešno kreiran i dodat.");
                     }
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"❌ Greška prilikom zahteva za novi sertifikat: {ex.Message}");
+                    Console.WriteLine($"Greška prilikom zahteva za novi sertifikat: {ex.Message}");
                     return;
                 }
             }
             else
             {
-                Console.WriteLine($"✅ Sertifikat pronađen: {cert.Subject}");
+                Console.WriteLine($"Sertifikat pronađen: {cert.Subject}");
             }
 
             this.Credentials.ServiceCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.ChainTrust;
@@ -105,7 +105,7 @@ namespace Client
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"⚠️ Greška pri zatvaranju: {ex.Message}");
+                Console.WriteLine($"Greška pri zatvaranju: {ex.Message}");
             }
         }
 

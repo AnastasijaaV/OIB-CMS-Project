@@ -28,12 +28,12 @@ namespace Service
             {
                 OperationContext.Current.InstanceContext.Closed += (sender, e) =>
                 {
-                    LogEvent($"🔴 Komunikacija prekinuta: Klijent {_cachedClientCN}.", EventLogEntryType.Information);
+                    LogEvent($" Komunikacija prekinuta: Klijent {_cachedClientCN}.", EventLogEntryType.Information);
                 };
 
                 OperationContext.Current.InstanceContext.Faulted += (sender, e) =>
                 {
-                    LogEvent($"⚠️ Komunikacija faultovana: Klijent {_cachedClientCN}.", EventLogEntryType.Warning);
+                    LogEvent($" Komunikacija faultovana: Klijent {_cachedClientCN}.", EventLogEntryType.Warning);
                 };
 
                 var certClaim = ServiceSecurityContext.Current.AuthorizationContext.ClaimSets
@@ -42,14 +42,14 @@ namespace Service
 
                 if (certClaim == null)
                 {
-                    Console.WriteLine("❌ Sertifikat nije pronađen u zahtevu.");
+                    Console.WriteLine(" Sertifikat nije pronađen u zahtevu.");
                     return;
                 }
 
                 string dn = (certClaim.Resource as X500DistinguishedName)?.Name;
                 if (string.IsNullOrWhiteSpace(dn))
                 {
-                    Console.WriteLine("❌ Prazan DistinguishedName iz sertifikata.");
+                    Console.WriteLine(" Prazan DistinguishedName iz sertifikata.");
                     return;
                 }
 
@@ -58,7 +58,7 @@ namespace Service
 
                 if (string.IsNullOrWhiteSpace(_cachedClientCN) || string.IsNullOrWhiteSpace(ou))
                 {
-                    Console.WriteLine("❌ Ne mogu da pročitam CN ili OU iz DN: " + dn);
+                    Console.WriteLine(" Ne mogu da pročitam CN ili OU iz DN: " + dn);
                     return;
                 }
 
@@ -87,11 +87,11 @@ namespace Service
                 string logLine = $"{newId}:{timestamp};{_cachedClientCN}";
 
                 File.AppendAllText(logPath, logLine + Environment.NewLine);
-                Console.WriteLine($"🟢 Upisano u log: {logLine}");
+                Console.WriteLine($" Upisano u log: {logLine}");
             }
             catch (Exception ex)
             {
-                Console.WriteLine("❌ GRESKA u TestCommunication: " + ex.Message);
+                Console.WriteLine(" GRESKA u TestCommunication: " + ex.Message);
             }
         }
 

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Cont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CertificateManager", "CertificateManagerService\CertificateManager.csproj", "{496D594A-76B2-40A1-8F51-5325E31B265B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backup", "Backup\Backup.csproj", "{70A05BFD-5E23-4B0A-B8A5-D624AB78FC66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{496D594A-76B2-40A1-8F51-5325E31B265B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{496D594A-76B2-40A1-8F51-5325E31B265B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{496D594A-76B2-40A1-8F51-5325E31B265B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70A05BFD-5E23-4B0A-B8A5-D624AB78FC66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70A05BFD-5E23-4B0A-B8A5-D624AB78FC66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70A05BFD-5E23-4B0A-B8A5-D624AB78FC66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70A05BFD-5E23-4B0A-B8A5-D624AB78FC66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
