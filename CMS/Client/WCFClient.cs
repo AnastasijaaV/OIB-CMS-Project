@@ -18,21 +18,56 @@ namespace Client
         {
             string cltCertCN = WindowsIdentity.GetCurrent().Name;
 
-            var cert = CertManager.GetCertificateFromStorage(StoreName.My, StoreLocation.LocalMachine, cltCertCN);
+            X509Certificate2 cert = CertManager.GetCertificateFromStorage(StoreName.My, StoreLocation.LocalMachine, cltCertCN);
 
+            // Ako ne postoji validan sertifikat (nema ga ili je povučen)
             if (cert == null)
             {
-                Console.WriteLine($"❌ Klijentski sertifikat sa CN={cltCertCN} NIJE pronađen u LocalMachine\\My store.");
-                return;
+                Console.WriteLine($"⚠ Sertifikat za klijenta \"{cltCertCN}\" nije pronađen ili je povučen. Zahtevam novi...");
+
+                try
+                {
+                    var certBinding = new NetTcpBinding();
+                    certBinding.Security.Mode = SecurityMode.Transport;
+                    certBinding.Security.Transport.ClientCredentialType = TcpClientCredentialType.Certificate;
+
+                    ChannelFactory<ICertificateManagerService> channelFactory = new ChannelFactory<ICertificateManagerService>(
+                        certBinding,
+                        new EndpointAddress("net.tcp://localhost:9999/ICertificateManagerService")
+                    );
+
+                    ICertificateManagerService serviceProxy = channelFactory.CreateChannel();
+
+                    // Poziv za izdavanje sertifikata
+                    serviceProxy.RequestCertificate(cltCertCN);
+                    channelFactory.Close();
+
+                    // Ponovno učitavanje novog sertifikata
+                    cert = CertManager.GetCertificateFromStorage(StoreName.My, StoreLocation.LocalMachine, cltCertCN);
+
+                    if (cert == null)
+                    {
+                        Console.WriteLine("❌ Novi sertifikat nije pronađen nakon zahteva. Komunikacija neće biti moguća.");
+                        return;
+                    }
+                    else
+                    {
+                        Console.WriteLine("✅ Novi sertifikat uspešno kreiran i dodat.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"❌ Greška prilikom zahteva za novi sertifikat: {ex.Message}");
+                    return;
+                }
             }
             else
             {
-                Console.WriteLine($"✅ Klijentski sertifikat pronađen: {cert.Subject}");
+                Console.WriteLine($"✅ Sertifikat pronađen: {cert.Subject}");
             }
 
             this.Credentials.ServiceCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.ChainTrust;
             this.Credentials.ServiceCertificate.Authentication.RevocationMode = X509RevocationMode.NoCheck;
-
             this.Credentials.ClientCertificate.Certificate = cert;
 
             factory = this.CreateChannel();
@@ -47,7 +82,7 @@ namespace Client
             }
             catch (Exception e)
             {
-                Console.WriteLine("[TestCommunication] ERROR = {0}", e.Message);
+                Console.WriteLine($"[TestCommunication] ERROR = {e.Message}");
             }
         }
 

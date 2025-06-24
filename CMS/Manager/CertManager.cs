@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography.X509Certificates;
+using System.IO;
 
 namespace Manager
 {
@@ -41,18 +42,41 @@ namespace Manager
             X509Store store = new X509Store(storeName, storeLocation);
             store.Open(OpenFlags.ReadOnly);
 
-            X509Certificate2Collection certCollection = store.Certificates.Find(X509FindType.FindBySubjectName, subjectName, true);
+            X509Certificate2Collection certCollection = store.Certificates
+                .Find(X509FindType.FindBySubjectName, subjectName, true);
 
-            foreach (X509Certificate2 c in certCollection)
+            string[] revokedLines = File.Exists(@"C:\Certificates\RevocationList.txt")
+                ? File.ReadAllLines(@"C:\Certificates\RevocationList.txt")
+                : new string[0];
+
+            foreach (X509Certificate2 c in certCollection.Cast<X509Certificate2>().OrderByDescending(x => x.NotBefore))
             {
-                if (c.GetNameInfo(X509NameType.SimpleName, false) == subjectName)
+                if (!revokedLines.Contains(c.SerialNumber, StringComparer.OrdinalIgnoreCase))
                 {
-                    Console.WriteLine($"[CertManager] Pronađen sertifikat: {c.Subject}");
+                    Console.WriteLine($"[CertManager] ✅ Pronađen VALIDAN sertifikat: {c.Subject} (SN={c.SerialNumber})");
                     return c;
                 }
             }
-            Console.WriteLine($"[CertManager] Sertifikat sa CN={subjectName} NIJE pronađen ili nije validan.");
+
+            Console.WriteLine($"[CertManager] ❌ Nijedan validan sertifikat nije pronađen za {subjectName}.");
             return null;
+        }
+
+        public static bool IsCertificateRevoked(string commonName)
+        {
+            string revocationFile = @"C:\Certificates\RevocationList.txt";
+
+            if (!File.Exists(revocationFile))
+                return false;
+
+            string[] lines = File.ReadAllLines(revocationFile);
+            foreach (var line in lines)
+            {
+                if (line.Trim().Equals(commonName, StringComparison.OrdinalIgnoreCase))
+                    return true;
+            }
+
+            return false;
         }
     }
 }

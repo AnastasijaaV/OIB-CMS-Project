@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Contracts;
+using System;
+using System.Diagnostics;
 using System.IO;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
-using System.ServiceModel;
-using System.Diagnostics;
 using System.Security.Principal;
-using Contracts;
+using System.ServiceModel;
+using System.ServiceModel.Description;
 
 namespace CertificateManager
 {
@@ -27,7 +28,8 @@ namespace CertificateManager
         {
             try
             {
-                string certPath = Path.Combine(CertificateFolder, $"{subjectName}.pfx");
+                string safeFileName = subjectName.Replace("\\", "").Replace(" / ", "");
+                string certPath = Path.Combine(CertificateFolder, $"{safeFileName}.pfx");
 
                 using (var rsa = RSA.Create(2048))
                 {
@@ -46,7 +48,7 @@ namespace CertificateManager
                     File.WriteAllBytes(certPath, certData);
                 }
 
-                ReplicateData(); // ✅ dodato
+                ReplicateData();
                 LogEvent($"Certificate created for {subjectName}. Path: {certPath}", EventLogEntryType.Information);
             }
             catch (Exception ex)
@@ -62,11 +64,27 @@ namespace CertificateManager
 
             try
             {
-                File.AppendAllText(RevocationListPath, serialNumber + Environment.NewLine);
-                NotifyClientsOfRevocation(serialNumber);
-                CreateCertificate("NewCertFor_" + serialNumber, true);
+                string commonName = GetCommonNameBySerialNumber(serialNumber);
 
-                ReplicateData(); // ✅ dodato
+                if (string.IsNullOrWhiteSpace(commonName))
+                {
+                    string msg = $"❌ Nije pronađen CN za serialNumber: {serialNumber}. Preskačem kreiranje novog sertifikata.";
+                    Console.WriteLine(msg);
+                    LogEvent(msg, EventLogEntryType.Warning);
+                    return; // Ovde prekidamo sve daljnje korake
+                }
+
+                // Upis u listu povučenih
+                File.AppendAllText(RevocationListPath, serialNumber + Environment.NewLine);
+
+                // Obaveštavanje klijenata
+                NotifyClientsOfRevocation(serialNumber);
+
+                // Kreiraj novi sertifikat
+                CreateCertificate(commonName, true);
+
+                // Replikacija i logovanje
+                ReplicateData();
                 LogEvent($"Certificate revoked and renewed. Serial Number: {serialNumber}", EventLogEntryType.Warning);
             }
             catch (Exception ex)
@@ -74,6 +92,27 @@ namespace CertificateManager
                 LogEvent($"Error revoking certificate: {ex.Message}", EventLogEntryType.Error);
                 throw;
             }
+        }
+
+        private string GetCommonNameBySerialNumber(string serialNumber)
+        {
+            string certFolder = @"C:\Certificates";
+
+            foreach (var file in Directory.GetFiles(certFolder, "*.pfx"))
+            {
+                var cert = new X509Certificate2(file, "password", X509KeyStorageFlags.PersistKeySet);
+                Console.WriteLine($"🔍 Proveravam fajl: {file}, SN={cert.SerialNumber}");
+
+                if (cert.SerialNumber.Equals(serialNumber, StringComparison.OrdinalIgnoreCase))
+                {
+                    string cn = cert.GetNameInfo(X509NameType.SimpleName, false);
+                    Console.WriteLine($"✅ Pronađen CN: {cn}");
+                    return cn;
+                }
+            }
+
+            Console.WriteLine($"⚠️ Nije pronađen nijedan sertifikat sa SN={serialNumber}");
+            return null;
         }
 
         public void ReplicateData()
@@ -90,7 +129,6 @@ namespace CertificateManager
                     if (fileName == "RevocationList.txt" || fileName.EndsWith(".pfx"))
                     {
                         File.Copy(file, Path.Combine(backupPath, fileName), overwrite: true);
-
                     }
                 }
 
@@ -110,11 +148,9 @@ namespace CertificateManager
                 string msg = $"Obaveštenje o revokaciji poslato (simulacija) za sertifikat sa SN={serialNumber}.";
                 Console.WriteLine($"📢 {msg}");
 
-                // Simulacija slanja: upis u fajl
                 string notifPath = Path.Combine(CertificateFolder, "RevocationNotifications.txt");
                 File.AppendAllText(notifPath, $"{DateTime.Now:dd.MM.yyyy. HH:mm:ss} - {msg}{Environment.NewLine}");
 
-                // Logovanje u EventLog
                 LogEvent(msg, EventLogEntryType.Information);
             }
             catch (Exception ex)
@@ -192,7 +228,7 @@ namespace CertificateManager
                 Console.WriteLine($"✔ Sertifikat izdat za {identity.Name} sa OU={userGroup}");
                 LogEvent($"✔ Sertifikat izdat za {identity.Name} sa OU={userGroup}.", EventLogEntryType.Information);
 
-                ReplicateData(); // ✅ dodato
+                ReplicateData();
 
                 return true;
             }
@@ -227,15 +263,29 @@ namespace CertificateManager
 
             host.AddServiceEndpoint(typeof(ICertificateManagerService), binding, address);
 
+            // ✅ Omogući prikaz detaljnih grešaka na klijentu
+            var debugBehavior = host.Description.Behaviors.Find<ServiceDebugBehavior>();
+            if (debugBehavior == null)
+            {
+                host.Description.Behaviors.Add(new ServiceDebugBehavior
+                {
+                    IncludeExceptionDetailInFaults = true
+                });
+            }
+            else
+            {
+                debugBehavior.IncludeExceptionDetailInFaults = true;
+            }
+
             try
             {
                 host.Open();
-                Console.WriteLine("CertificateManagerService is running. Press <Enter> to stop.");
+                Console.WriteLine("✅ CertificateManagerService is running. Press <Enter> to stop.");
                 Console.ReadLine();
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                Console.WriteLine($"❌ Error: {ex.Message}");
             }
             finally
             {

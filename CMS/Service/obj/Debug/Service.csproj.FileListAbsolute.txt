@@ -34,3 +34,16 @@ C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Service\obj\Debug\Service.csproj.CoreComp
 C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Service\obj\Debug\Service.csproj.Up2Date
 C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Service\obj\Debug\Service.exe
 C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Service\obj\Debug\Service.pdb
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Service\bin\Debug\Service.exe.config
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Service\bin\Debug\Service.exe
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Service\bin\Debug\Service.pdb
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Service\bin\Debug\Contracts.dll
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Service\bin\Debug\Manager.dll
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Service\bin\Debug\Contracts.pdb
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Service\bin\Debug\Manager.pdb
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Service\obj\Debug\Service.csproj.AssemblyReference.cache
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Service\obj\Debug\Service.exe.config
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Service\obj\Debug\Service.csproj.CoreCompileInputs.cache
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Service\obj\Debug\Service.csproj.Up2Date
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Service\obj\Debug\Service.exe
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Service\obj\Debug\Service.pdb

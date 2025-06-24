@@ -35,3 +35,16 @@ C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Client\obj\Debug\Client.csproj.CoreCompil
 C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Client\obj\Debug\Client.csproj.Up2Date
 C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Client\obj\Debug\Client.exe
 C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Client\obj\Debug\Client.pdb
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Client\bin\Debug\Client.exe.config
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Client\bin\Debug\Client.exe
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Client\bin\Debug\Client.pdb
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Client\bin\Debug\Contracts.dll
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Client\bin\Debug\Manager.dll
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Client\bin\Debug\Contracts.pdb
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Client\bin\Debug\Manager.pdb
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Client\obj\Debug\Client.exe.config
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Client\obj\Debug\Client.csproj.Up2Date
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Client\obj\Debug\Client.exe
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Client\obj\Debug\Client.pdb

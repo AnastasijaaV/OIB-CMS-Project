@@ -22,3 +22,12 @@ C:\jj\OsnoveBezbednosti\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\
 C:\jj\OsnoveBezbednosti\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\Certific.36225EB2.Up2Date
 C:\jj\OsnoveBezbednosti\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\CertificateManagerService.exe
 C:\jj\OsnoveBezbednosti\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\CertificateManagerService.pdb
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\CertificateManagerService\bin\Debug\CertificateManagerService.exe
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\CertificateManagerService\bin\Debug\CertificateManagerService.pdb
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\CertificateManagerService\bin\Debug\Contracts.dll
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\CertificateManagerService\bin\Debug\Contracts.pdb
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\CertificateManager.csproj.AssemblyReference.cache
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\CertificateManager.csproj.CoreCompileInputs.cache
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\Certific.36225EB2.Up2Date
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\CertificateManagerService.exe
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\CertificateManagerService.pdb

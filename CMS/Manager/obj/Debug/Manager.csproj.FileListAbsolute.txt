@@ -16,3 +16,9 @@ C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.csproj.Assembly
 C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.csproj.CoreCompileInputs.cache
 C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.dll
 C:\jj\OIB\projekat\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.pdb
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Manager\bin\Debug\Manager.dll
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Manager\bin\Debug\Manager.pdb
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.csproj.AssemblyReference.cache
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.csproj.CoreCompileInputs.cache
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.dll
+C:\jj\OsnoveInfBezbednosti\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.pdb
