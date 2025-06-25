@@ -96,6 +96,9 @@ namespace Client
                 Console.WriteLine($"🔴 {msg}");
                 LogEvent($"Prekinuta komunikacija: {msg}", EventLogEntryType.Information);
 
+                // Poziv serveru da evidentira prekid
+                factory?.DisconnectNotice(); // <-- DODATO OVO
+
                 if (factory is ICommunicationObject commObj && commObj.State == CommunicationState.Opened)
                 {
                     commObj.Close();
@@ -118,6 +121,17 @@ namespace Client
                 EventLog.CreateEventSource(source, log);
 
             EventLog.WriteEntry(source, message, entryType);
+        }
+        public void DisconnectNotice()
+        {
+            try
+            {
+                factory?.DisconnectNotice(); // <-- poziva server
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[DisconnectNotice] Greška: {ex.Message}");
+            }
         }
     }
 }

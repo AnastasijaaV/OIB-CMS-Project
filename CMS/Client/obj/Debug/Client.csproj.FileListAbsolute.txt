@@ -61,3 +61,15 @@ D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Client\obj\De
 D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Client\obj\Debug\Client.csproj.Up2Date
 D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Client\obj\Debug\Client.exe
 D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Client\obj\Debug\Client.pdb
+C:\jj\OIBgit\OIB-CMS-Project\CMS\Client\bin\Debug\Client.exe.config
+C:\jj\OIBgit\OIB-CMS-Project\CMS\Client\bin\Debug\Client.exe
+C:\jj\OIBgit\OIB-CMS-Project\CMS\Client\bin\Debug\Client.pdb
+C:\jj\OIBgit\OIB-CMS-Project\CMS\Client\bin\Debug\Contracts.dll
+C:\jj\OIBgit\OIB-CMS-Project\CMS\Client\bin\Debug\Manager.dll
+C:\jj\OIBgit\OIB-CMS-Project\CMS\Client\bin\Debug\Contracts.pdb
+C:\jj\OIBgit\OIB-CMS-Project\CMS\Client\bin\Debug\Manager.pdb
+C:\jj\OIBgit\OIB-CMS-Project\CMS\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\jj\OIBgit\OIB-CMS-Project\CMS\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\jj\OIBgit\OIB-CMS-Project\CMS\Client\obj\Debug\Client.csproj.Up2Date
+C:\jj\OIBgit\OIB-CMS-Project\CMS\Client\obj\Debug\Client.exe
+C:\jj\OIBgit\OIB-CMS-Project\CMS\Client\obj\Debug\Client.pdb

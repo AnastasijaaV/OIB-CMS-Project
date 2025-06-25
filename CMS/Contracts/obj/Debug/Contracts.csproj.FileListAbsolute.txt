@@ -34,3 +34,9 @@ D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Contracts\obj
 D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.csproj.CoreCompileInputs.cache
 D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.dll
 D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.pdb
+C:\jj\OIBgit\OIB-CMS-Project\CMS\Contracts\bin\Debug\Contracts.dll
+C:\jj\OIBgit\OIB-CMS-Project\CMS\Contracts\bin\Debug\Contracts.pdb
+C:\jj\OIBgit\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.csproj.AssemblyReference.cache
+C:\jj\OIBgit\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.csproj.CoreCompileInputs.cache
+C:\jj\OIBgit\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.dll
+C:\jj\OIBgit\OIB-CMS-Project\CMS\Contracts\obj\Debug\Contracts.pdb

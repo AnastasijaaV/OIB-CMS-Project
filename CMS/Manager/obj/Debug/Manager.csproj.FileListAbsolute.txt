@@ -28,3 +28,9 @@ D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Manager\obj\D
 D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.csproj.CoreCompileInputs.cache
 D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.dll
 D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.pdb
+C:\jj\OIBgit\OIB-CMS-Project\CMS\Manager\bin\Debug\Manager.dll
+C:\jj\OIBgit\OIB-CMS-Project\CMS\Manager\bin\Debug\Manager.pdb
+C:\jj\OIBgit\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.csproj.AssemblyReference.cache
+C:\jj\OIBgit\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.csproj.CoreCompileInputs.cache
+C:\jj\OIBgit\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.dll
+C:\jj\OIBgit\OIB-CMS-Project\CMS\Manager\obj\Debug\Manager.pdb

@@ -105,5 +105,12 @@ namespace Service
 
             EventLog.WriteEntry(source, message, entryType);
         }
+
+        public void DisconnectNotice()
+        {
+            string msg = $"Klijent {_cachedClientCN} je zatvorio konekciju (CTRL+C).";
+            Console.WriteLine($"🔴 {msg}");
+            LogEvent(msg, EventLogEntryType.Information);
+        }
     }
 }

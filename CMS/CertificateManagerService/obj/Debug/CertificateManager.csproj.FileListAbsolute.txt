@@ -40,3 +40,12 @@ D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\CertificateMa
 D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\Certific.36225EB2.Up2Date
 D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\CertificateManagerService.exe
 D:\CETVRTA GODINA\OIB-Projekat-Konacna-Verzija\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\CertificateManagerService.pdb
+C:\jj\OIBgit\OIB-CMS-Project\CMS\CertificateManagerService\bin\Debug\CertificateManagerService.exe
+C:\jj\OIBgit\OIB-CMS-Project\CMS\CertificateManagerService\bin\Debug\CertificateManagerService.pdb
+C:\jj\OIBgit\OIB-CMS-Project\CMS\CertificateManagerService\bin\Debug\Contracts.dll
+C:\jj\OIBgit\OIB-CMS-Project\CMS\CertificateManagerService\bin\Debug\Contracts.pdb
+C:\jj\OIBgit\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\CertificateManager.csproj.AssemblyReference.cache
+C:\jj\OIBgit\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\CertificateManager.csproj.CoreCompileInputs.cache
+C:\jj\OIBgit\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\Certific.36225EB2.Up2Date
+C:\jj\OIBgit\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\CertificateManagerService.exe
+C:\jj\OIBgit\OIB-CMS-Project\CMS\CertificateManagerService\obj\Debug\CertificateManagerService.pdb

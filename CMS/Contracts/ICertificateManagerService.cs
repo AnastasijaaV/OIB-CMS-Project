@@ -19,5 +19,7 @@ namespace Contracts
 
         [OperationContract]
         bool RequestCertificate(string windowsUsername);
+
+
     }
 }
