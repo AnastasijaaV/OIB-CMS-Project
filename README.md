@@ -28,10 +28,10 @@ Ovaj projekat implementira komponentu za upravljanje sertifikatima i bezbednu ko
 
 📸 *Primer izgleda:*
 
-![Personal](ScreenshotFolder/personal_certificates.png)  
-![Trusted People](ScreenshotFolder/trusted_people.png)  
-![Root CA](ScreenshotFolder/client_run.png)
-![Root CA](ScreenshotFolder/backup_run.png)
+![Personal](CMS/ScreenshotFolder/personal_certificates.png)  
+![Trusted People](CMS/ScreenshotFolder/trusted_people.png)  
+![Root CA](CMS/ScreenshotFolder/client_run.png)
+![Root CA](CMS/ScreenshotFolder/backup_run.png)
 
 ### 2. Korisničke grupe i prava
 
@@ -41,7 +41,7 @@ Ovaj projekat implementira komponentu za upravljanje sertifikatima i bezbednu ko
 
 📸 *Primer podešavanja:*
 
-![Administrators grupa](ScreenshotFolder/groups.png)
+![Administrators grupa](CMS/ScreenshotFolder/groups.png)
 
 > Kada se doda novi korisnik, potrebno je da se korisnik prijavi bar jednom kako bi se grupa primenila.
 
@@ -58,14 +58,14 @@ Ovaj projekat implementira komponentu za upravljanje sertifikatima i bezbednu ko
 
 1. Idi u `bin\Debug` folder svake komponente
 2. Pokreni svaku `.exe` aplikaciju **desnim klikom → Run as administrator**
-3. Ako koristiš različite korisnike za klijente, koristi `Shift + desni klik → Run as different user`
+3. Ako koristiš različite korisnike za klijente, koristi `Shift + desni klik → Run as different user`(takodje i wcfservice treba da se pokrene kao wcfservice user)
 
 📸 *Pokretanje klijenta:*
 
-![Run as admin](ScreenshotFolder/client_run.png)  
+![Run as admin](CMS/ScreenshotFolder/client_run.png)  
 📸 *Pokretanje backupa:*
 
-![Run backup](ScreenshotFolder/backup_run.png)
+![Run backup](CMS/ScreenshotFolder/backup_run.png)
 
 ## 📁 Fajlovi koji se generišu
 
@@ -75,12 +75,11 @@ Svi važni fajlovi se čuvaju u folderu `C:\Certificates`:
 - `Log.txt` – log aktivnosti klijenata
 - `RevocationList.txt` – lista povučenih sertifikata
 - `RevocationNotifications.txt` – beleške o obaveštenju klijentima
-- `Backup/` – backup folderi
 - `RealBackup/` – podaci replikovani sa `CertificateManagerService`
 
 📸 *Primer:*
 
-![Certificates folder](ScreenshotFolder/certificates_folder.png)
+![Certificates folder](CMS/ScreenshotFolder/certificates_folder.png)
 
 ## 📄 Windows Event Log
 
@@ -88,7 +87,7 @@ Logovanje aktivnosti se obavlja u `Application` delu Event Viewera.
 
 📸 *Primer loga:*
 
-![Event Viewer](ScreenshotFolder/event_viewer.png)
+![Event Viewer](CMS/ScreenshotFolder/event_viewer.png)
 
 ## 🎮 Meni u klijentskoj aplikaciji
 
