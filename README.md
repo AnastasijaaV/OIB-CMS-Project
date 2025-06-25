@@ -60,12 +60,7 @@ Ovaj projekat implementira komponentu za upravljanje sertifikatima i bezbednu ko
 2. Pokreni svaku `.exe` aplikaciju **desnim klikom → Run as administrator**
 3. Ako koristiš različite korisnike za klijente, koristi `Shift + desni klik → Run as different user`(takodje i wcfservice treba da se pokrene kao wcfservice user)
 
-📸 *Pokretanje klijenta:*
 
-![Run as admin](CMS/ScreenshotFolder/client_run.png)  
-📸 *Pokretanje backupa:*
-
-![Run backup](CMS/ScreenshotFolder/backup_run.png)
 
 ## 📁 Fajlovi koji se generišu
 
