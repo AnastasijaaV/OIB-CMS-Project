@@ -21,7 +21,7 @@ Ovaj projekat implementira komponentu za upravljanje sertifikatima i bezbednu ko
 ### 1. Sertifikati
 
 - Sertifikati se instaliraju u `Local Machine` za svaki entitet (`wcfclient`, `wcfclient2`, `wcfservice`)
-- Sertifikati treba da se nalaze u:
+- Sertifikati treba da se nalaze u sledećim sekcijama:
   - **Personal (My)**
   - **Trusted People**
   - **Trusted Root Certification Authorities**
@@ -58,7 +58,7 @@ Ovaj projekat implementira komponentu za upravljanje sertifikatima i bezbednu ko
 
 1. Idi u `bin\Debug` folder svake komponente
 2. Pokreni svaku `.exe` aplikaciju **desnim klikom → Run as administrator**
-3. Ako koristiš različite korisnike za klijente, koristi `Shift + desni klik → Run as different user`(takodje i wcfservice treba da se pokrene kao wcfservice user)
+3. Ako koristiš različite korisnike za klijente, koristi `Shift + desni klik → Run as different user`(takođe i wcfservice treba da se pokrene kao wcfservice user)
 
 
 
@@ -88,12 +88,8 @@ Logovanje aktivnosti se obavlja u `Application` delu Event Viewera.
 
 Klijent nudi sledeće opcije:
 
-Kreiraj sertifikat
-
-Povuci (revoke) sertifikat
-
-Auto provera i automatska revokacija
-
-Pokreni periodičnu komunikaciju
-
-Izlaz
+- Kreiraj sertifikat
+- Povuci (revoke) sertifikat
+- Auto provera i automatska revokacija
+- Pokreni periodičnu komunikaciju
+- Izlaz
