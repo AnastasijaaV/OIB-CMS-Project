@@ -33,7 +33,7 @@ namespace Client
                 Console.WriteLine("2. Povuci (revoke) sertifikat");
                 Console.WriteLine("3. Auto provera i automatska revokacija");
                 Console.WriteLine("4. Pokreni periodičnu komunikaciju");
-                Console.WriteLine("5. Izlaz");
+                Console.WriteLine("5. Izlaz iz aplikacije");
                 Console.Write("Izbor: ");
 
                 string choice = Console.ReadLine();
@@ -52,7 +52,7 @@ namespace Client
                         Console.Write("Unesi serial number sertifikata za povlačenje: ");
                         string serialInput = Console.ReadLine();
                         certService.RevokeCertificate(serialInput);
-                        Console.WriteLine("Revokacija pokrenuta.");
+                        Console.WriteLine("Proces revokacije je pokrenut.");
                         break;
 
                     case "3":
