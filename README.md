@@ -92,4 +92,4 @@ Klijent nudi sledeće opcije:
 - Povuci (revoke) sertifikat
 - Auto provera i automatska revokacija
 - Pokreni periodičnu komunikaciju
-- Izlaz
+- Izlaz iz aplikacije
